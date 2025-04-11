@@ -1,20 +1,22 @@
-public class zZZxXsortyThingy69 {
-public static void main(String args[]){
-int[] XxYzZz = {9,3,7,1,4};
-badSortThemMaybe(XxYzZz);
+public class arraySorter {
+    public static void main(String[] args) {
+        int[] numbers = {9, 3, 7, 1, 4};
+        sortArray(numbers);
 
-for(int b = 0; b < XxYzZz.length; b++)System.out.print(XxYzZz[b] + " "); 
-}
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
 
-public static void badSortThemMaybe(int[] woohoo){
-for(int i=0;i<woohoo.length;i++){
-for(int j=0;j<woohoo.length;j++){
-if(woohoo[i]<woohoo[j]){ // Bug: should be woohoo[i] < woohoo[j]
-int tmp = woohoo[i];
-woohoo[i]=woohoo[j];
-woohoo[j]=tmp;}
-}
-}
-// forgot to return anything even if it's not needed here lol
-}
+    public static void sortArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+    }
 }
